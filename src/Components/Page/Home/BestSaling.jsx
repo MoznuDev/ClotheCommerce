@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import Frame1 from '../../../assets/Frame1.png';
+import image6 from '../../../assets/image6.png';
 import image1 from '../../../assets/image1.png';
 import image2 from '../../../assets/image2.png';
 import image3 from '../../../assets/image3.png';
@@ -11,7 +11,7 @@ import Bestsaler2 from "../../../assets/Bestsaler2.png";
 import { FaStar } from 'react-icons/fa';
 
 const products = [
-  { id: 1, image: Frame1, name: "Name of the product", price: "$35.6", rating: 5 },
+  { id: 1, image: image6, name: "Name of the product", price: "$35.6", rating: 5 },
   { id: 2, image: image1, name: "Name of the product", price: "$35.6", rating: 4 },
   { id: 3, image: image2, name: "Name of the product", price: "$35.6", rating: 5 },
   { id: 4, image: image3, name: "Name of the product", price: "$35.6", rating: 3 },
@@ -22,10 +22,10 @@ const products = [
 ];
 
 const BestSaling = () => {
-  // শুরুতে ৪টা প্রোডাক্ট দেখাবে
+  
   const [visibleCount, setVisibleCount] = useState(4);
 
-  // বোতামে ক্লিক করলে সব প্রোডাক্ট দেখাবে
+ 
   const handleShowMore = () => {
     setVisibleCount(products.length);
   };
@@ -57,7 +57,7 @@ const BestSaling = () => {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-120 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-300"
+                className="w-full h-120 bg-gray-300 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-300"
               />
 
               {/* Product Info */}

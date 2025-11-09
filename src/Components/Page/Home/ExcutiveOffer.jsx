@@ -3,30 +3,31 @@ import Bestsaler3 from "../../../assets/Bestsaler3.png";
 
 const ExcutiveOffer = () => {
   return (
-    <section className="max-w-screen-2xl mx-auto px-4 mt-[60px] ">
-      {/* Image (20px up from box) */}
-     <div className="flex justify-between bg-bgColor flex-col md:flex-row items-center md:items-start md:gap-10 md:p-10 rounded-2xl shadow-lg">
-         <div className=" space-y-6 w-full md:w-1/2">
-        <img
-          src={Bestsaler3}
-          alt="Exclusive Offer"
-            className="w-full h-auto object-cover rounded-2xl mt-[-100px]"
-        />
-      </div>
+    <section className="max-w-screen-2xl mx-auto px-4 mt-20">
+      {/* Main Box */}
+      <div className="relative bg-bgColor flex flex-col md:flex-row items-center justify-between rounded-2xl shadow-lg overflow-visible">
+        
+        {/* Image Section — বাইরে 10px উপরে */}
+        <div className="absolute top-[-300px] left-1/2 md:left-10 transform -translate-x-1/2 md:translate-x-0">
+          <img
+            src={Bestsaler3}
+            alt="Exclusive Offer"
+            className="w-[300px] md:w-[468px] object-contain drop-shadow-xl"
+          />
+        </div>
 
-      {/* Content Box */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10  rounded-2xl  pt-[200px] px-6">
-        <div className="space-y-6 w-full md:w-1/2">
+        {/* Text Section */}
+        <div className="w-full md:w-1/2 ml-auto px-6 py-10 mt-[250px] md:mt-0 md:py-16 md:pr-12">
           <h2 className="text-3xl font-semibold font-roboto text-gray-800">
             Exclusive Offers
           </h2>
-          <p className="text-[20px] text-gray-600 leading-relaxed">
+          <p className="text-[20px] text-gray-600 leading-relaxed mt-4">
             Unlock the ultimate style upgrade with our exclusive offer — enjoy
             savings of up to 40% off on our latest new arrivals.
           </p>
 
           {/* Counter Section */}
-          <div className="flex items-center justify-start gap-6 mt-6">
+          <div className="flex items-center gap-6 mt-6">
             <div className="text-center">
               <p className="text-3xl font-bold text-btnColor">05</p>
               <span className="text-sm text-gray-500">Days</span>
@@ -47,7 +48,6 @@ const ExcutiveOffer = () => {
           </button>
         </div>
       </div>
-     </div>
     </section>
   );
 };
